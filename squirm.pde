@@ -1,6 +1,6 @@
-int numPoints = 100;
-int numLayers = 5;
-float zoff = 0.0;
+int numPoints = 360;
+int numLayers = 10; //5 to 10, not very interesting more than that.
+/* float zoff = 0.0; */
 
 PVector origin;
 ArrayList<Bark> layers = new ArrayList<Bark>();
@@ -16,7 +16,7 @@ void setup(){
   for(int i = 0; i < numLayers; i++){
     layers.add(new Bark(numPoints));
   }
-  noLoop();
+  /* noLoop(); */
 }
 
 void draw(){
@@ -27,10 +27,11 @@ void draw(){
   for(Bark b : layers){
     b.update();
     b.display();
-    zoff += 0.1;
+    b.zoff += 0.01;
   }
 }
  
 void mousePressed(){
-  redraw();
+  /* redraw(); */
+  noLoop();
 }

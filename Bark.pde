@@ -4,7 +4,7 @@ class Bark {
   ArrayList<PVector> points;// = new ArrayList<PVector>();
   int perlinSeed; //so noise is unique for each shell
   float diameter;
-
+  float zoff = random(1);
   //constructor
   Bark(int s){
     size = s;
@@ -30,7 +30,7 @@ class Bark {
       float xoff = map(cos(angle), -1, 1, 0, 1);
       float yoff = map(sin(angle), -1, 1, 0, 1);
 
-      float r = map(noise(xoff, yoff, zoff), 0, 1, diameter/2, diameter);
+      float r = map(noise(xoff, yoff, zoff), 0, 1, diameter/4, diameter);
 
       float x = r * cos(angle);
       float y = r * sin(angle);
