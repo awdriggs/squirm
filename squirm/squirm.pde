@@ -1,3 +1,4 @@
+//this would be a good animation
 int numPoints = 360;
 int numLayers = 10; //5 to 10, not very interesting more than that.
 /* float zoff = 0.0; */
